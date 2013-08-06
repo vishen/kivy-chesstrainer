@@ -40,20 +40,25 @@ class ChessApp(App):
         self.last_touch_up_move = None
 
         parent = BoxLayout(size_hint=(1,1))
-        grid = GridLayout(cols=8, rows=8, spacing=0, size_hint=(1, 1))
+        # grid = GridLayout(cols=8, rows=8, padding=10, spacing=0, size=(575,575), size_hint=(0,0))
+        grid = GridLayout(rows=8, padding=10, spacing=0)
 
         for i, name in enumerate(SQUARES):
-            bt = Image(allow_stretch=True)
-            bt.sq = i
-            bt.name = name
-            
-            if i % 2 == 0:
-                bt.sq_color = "l"
-                bt.background_down = "img/empty-l.png"
+            light = i % 2 == (i / 8) % 2
 
-            else:
-                bt.sq_color = "d"
-                bt.background_down = "img/empty-d.png"
+            background_color = (0.233, 0.166, 0.115, 0.8)
+            background_normal = ''
+
+            if not light:
+                background_color = (1, 0, 0, 1)
+
+            button_kwargs = {
+                'text': '%s' % SQUARES[i],
+                'background_color': background_color,
+                'background_normal': background_normal,
+            }
+            bt = Button(**button_kwargs)
+            
 
 
             grid.add_widget(bt)
