@@ -1,0 +1,24 @@
+ScreenManager:
+    Screen:
+        BoxLayout:
+            size_hint: 1, 1
+            orientation: "horizontal"
+            GridLayout:
+                id: chess_grid
+                rows: 8
+                padding: 10
+                spacing: 0
+                size_hint: 1, 1
+
+            BoxLayout:
+                orientation: "vertical"
+                id: settings
+                size_hint: 0.15, 0.15
+
+                CheckBox:
+                    text: "Show Coords"
+                    active: True
+
+                CheckBox:
+                    text: "Show Pieces"
+
