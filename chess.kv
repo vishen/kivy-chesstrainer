@@ -1,6 +1,10 @@
 ScreenManager:
     Screen:
+        name: "screen_game"
         BoxLayout:
+
+            id: game
+
             size_hint: 1, 1
             orientation: "vertical"
             GridLayout:
@@ -11,10 +15,32 @@ ScreenManager:
                 size_hint: 1, 1
 
             BoxLayout:
-                orientation: "vertical"
-                id: settings
-                size_hint: 0.15, 0.15
+                orientation: "horizontal"
+                size_hint: 1, 0.15
 
                 
                 RstDocument:
+                    id: main_text
+                    size_hint: 1, 1
+                    padding: 10
                     text: "Hello this is a really long test"
+
+                Button:
+                    size_hint: 0.15, 1
+                    text: "Settings"
+
+                    on_press: root.current = 'screen_settings'
+        
+    Screen:
+        name: "screen_settings"
+
+        Settings:
+            title: "Chess Settings"
+
+            on_close: root.current = 'screen_game'
+
+            SettingsPanel:
+                title: "Game Settings"
+
+
+            

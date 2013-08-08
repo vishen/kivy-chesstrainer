@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.uix.button import Button
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 from ChessBoard import ChessBoard
 
@@ -12,8 +13,6 @@ img_piece_abv={"B":"WBishop", "R":"WRook", "N":"WKnight", "Q":"WQueen", "K":"WKi
 "b":"BBishop", "r":"BRook", "n":"BKnight", "q":"BQueen", "k":"BKing", "p":"BPawn"}
 
 
-
-# Builder.load_file('schess.kv')
 
 class ChessApp(App):
 
@@ -63,6 +62,8 @@ class ChessApp(App):
         self.refresh_board()
 
         return root
+
+
 
 
 if __name__ == '__main__':
