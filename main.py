@@ -1,13 +1,5 @@
 from kivy.app import App
-from kivy.core.window import Window
-from kivy.properties import ObjectProperty
 from kivy.uix.button import Button
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.image import Image
-from kivy.uix.screenmanager import SlideTransition, ScreenManager, Screen
-from kivy import utils as kivy_utils
-from kivy.lang import Builder
 
 from ChessBoard import ChessBoard
 

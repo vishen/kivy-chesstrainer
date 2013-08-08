@@ -2,7 +2,7 @@ ScreenManager:
     Screen:
         BoxLayout:
             size_hint: 1, 1
-            orientation: "horizontal"
+            orientation: "vertical"
             GridLayout:
                 id: chess_grid
                 rows: 8
@@ -15,10 +15,6 @@ ScreenManager:
                 id: settings
                 size_hint: 0.15, 0.15
 
-                CheckBox:
-                    text: "Show Coords"
-                    active: True
-
-                CheckBox:
-                    text: "Show Pieces"
-
+                
+                RstDocument:
+                    text: "Hello this is a really long test"
